@@ -1,7 +1,7 @@
 
 import express, { Request, Response } from 'express';
 import mongoose from "mongoose";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import UserController from "./controllers/UserController";
 import TuitController from "./controllers/TuitController";
 const app = express();
@@ -12,7 +12,7 @@ const app = express();
 //Uncomment this line below to connect to mongo server online
 mongoose.connect("mongodb+srv://frostyfeet1998:cs5500password@cluster0.erteh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!'));
