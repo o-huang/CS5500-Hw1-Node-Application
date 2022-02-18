@@ -1,5 +1,5 @@
 
-import Tuit from "./Tuit";
+import Tuit from "./tuits/Tuit";
 
 export default class Tuit2Tag {
     private tag: string = '';
