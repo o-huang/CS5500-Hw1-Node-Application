@@ -6,10 +6,10 @@ import TuitController from "./controllers/TuitController";
 import LikeController from "./controllers/LikeController";
 
 // Uncomment this line below to connect to local host
-mongoose.connect('mongodb://localhost:27017/tuiter-db');
+//mongoose.connect('mongodb://localhost:27017/tuiter-db');
 
 // Uncomment this line below to connect to mongo server online
-// mongoose.connect("mongodb+srv://frostyfeet1998:cs5500password@cluster0.erteh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://frostyfeet1998:cs5500password@cluster0.erteh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 const app = express();
 app.use(express.json());
