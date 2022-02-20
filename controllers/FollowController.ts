@@ -1,6 +1,7 @@
+/**
+ * @file Controller RESTful Web service API for follows resource
+ */
 import { Express, Request, Response } from "express";
-import { ParamsDictionary } from "express-serve-static-core";
-import { ParsedQs } from "qs";
 import FollowDao from "../daos/FollowDao";
 import FollowControllerI from "../interfaces/FollowControllerI";
 

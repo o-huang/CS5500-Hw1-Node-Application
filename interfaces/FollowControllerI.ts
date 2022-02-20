@@ -1,5 +1,8 @@
 import { Request, Response } from "express";
 
+/**
+ * @file Controller interface RESTful Web service API for follows resource
+ */
 export default interface FollowControllerI {
     userFollowsAnotherUser(req: Request, res: Response): void;
     userUnfollowAnotherUser(req: Request, res: Response): void;

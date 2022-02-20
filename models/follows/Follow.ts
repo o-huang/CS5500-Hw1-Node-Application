@@ -1,3 +1,6 @@
+/**
+ * @file Declares follow data type representing between user and follows.
+ */
 import User from "../users/User";
 
 
