@@ -3,7 +3,7 @@
  * to integrate with MongoDB
  */
 import FollowDaoI from "../interfaces/FollowDaoI";
-import FollowModel from "../mongoose/Follows/FollowModel";
+import FollowModel from "../mongoose/follows/FollowModel";
 import Follow from "../models/follows/Follow";
 
 export default class FollowDao implements FollowDaoI {

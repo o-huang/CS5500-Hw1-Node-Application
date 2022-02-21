@@ -3,8 +3,8 @@
  * to integrate with MongoDB
  */
 import MessageDaoI from "../interfaces/MessageDaoI";
-import MessageModel from "../mongoose/Messages/MessageModel";
-import Message from "../models/Messages/Message";
+import MessageModel from "../mongoose/messages/MessageModel";
+import Message from "../models/messages/Message";
 
 export default class MessageDao implements MessageDaoI {
 

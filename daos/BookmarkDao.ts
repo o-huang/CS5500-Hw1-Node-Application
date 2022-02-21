@@ -3,7 +3,7 @@
  * to integrate with MongoDB
  */
 import BookmarkDaoI from "../interfaces/BookmarkDaoI";
-import BookmarkModel from "../mongoose/Bookmarks/BookmarkModel";
+import BookmarkModel from "../mongoose/bookmarks/BookmarkModel";
 import Bookmark from "../models/bookmarks/Bookmark";
 
 export default class BookmarkDao implements BookmarkDaoI {
