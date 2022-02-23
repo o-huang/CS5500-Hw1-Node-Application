@@ -127,12 +127,21 @@ export default class UserController implements UserControllerI {
         UserController.userDao.deleteAllUsers()
             .then((status) => res.send(status));
 
+    /**
+     * Logins the user to tuiter
+     * @param {Request} req Request and verify user
+     * @param {Response} res Represents response to client, returning the user
+     */
     login = (req: Request, res: Response) =>
         UserController.userDao.findUserByCredentials(req.body.username, req.body.password)
             .then(user => {
                 res.json(user)
             });
-
+    /**
+     * Register a new user
+     * @param {Request} req Request and registers a new user
+     * @param {Response} res Represents response to client, return with a new user
+     */
     register = (req: Request, res: Response) =>
         UserController.userDao.findUserByUsername(req.body.username)
             .then(user => {
