@@ -48,11 +48,11 @@ export default class TuitController implements TuitControllerI {
     private constructor() { }
 
     /**
-     * Retrieves all tuits from the database and returns an array of tuits.
-     * @param {Request} req Represents request from client
-     * @param {Response} res Represents response to client, including the
-     * body formatted as JSON arrays containing the tuit objects
-     */
+    * Retrieves all tuits from the database and returns an array of tuits.
+    * @param {Request} req Represents request from client
+    * @param {Response} res Represents response to client, including the
+    * body formatted as JSON arrays containing the tuit objects
+    */
     findAllTuits = (req: Request, res: Response) =>
         TuitController.tuitDao.findAllTuits()
             .then((tuits: Tuit[]) => res.json(tuits));
@@ -69,7 +69,7 @@ export default class TuitController implements TuitControllerI {
             .then((tuits: Tuit[]) => res.json(tuits));
 
     /**
-     * Find a tuit instance in database
+     * Find tuit by id in database
      * @param {Request} req Represents request from client, including path
      * parameter tid identifying the primary key of the tuit to be retrieved
      * @param {Response} res Represents response to client, including the
