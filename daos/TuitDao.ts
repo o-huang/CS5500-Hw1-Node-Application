@@ -32,17 +32,21 @@ export default class TuitDao implements TuitDaoI {
      * Retrieve all tuit instance from the database
      * @returns Promise To be notified when all tuit is retrieved from database
      */
-    findAllTuits = async (): Promise<Tuit[]> =>
-        TuitModel.find();
+     findAllTuits = async (): Promise<Tuit[]> =>
+     TuitModel.find()
+         .populate("postedBy")
+         .exec();
 
-        
+
     /**
      * Retrieve all tuit instance from the database from a user
      * @param {string} uid Primary key of user to be found
      * @returns Promise To be notified when user's tuit is retrieved from database
      */
-    findAllTuitsByUser = async (uid: string): Promise<Tuit[]> =>
-        TuitModel.find({ postedBy: uid });
+     findAllTuitsByUser = async (uid: string): Promise<Tuit[]> =>
+     TuitModel.find({postedBy: uid})
+         .populate("postedBy")
+         .exec();
 
 
     /**
