@@ -32,10 +32,10 @@ export default class TuitDao implements TuitDaoI {
      * Retrieve all tuit instance from the database
      * @returns Promise To be notified when all tuit is retrieved from database
      */
-     findAllTuits = async (): Promise<Tuit[]> =>
-     TuitModel.find()
-         .populate("postedBy")
-         .exec();
+    findAllTuits = async (): Promise<Tuit[]> =>
+        TuitModel.find()
+            .populate("postedBy")
+            .exec();
 
 
     /**
@@ -43,10 +43,10 @@ export default class TuitDao implements TuitDaoI {
      * @param {string} uid Primary key of user to be found
      * @returns Promise To be notified when user's tuit is retrieved from database
      */
-     findAllTuitsByUser = async (uid: string): Promise<Tuit[]> =>
-     TuitModel.find({postedBy: uid})
-         .populate("postedBy")
-         .exec();
+    findAllTuitsByUser = async (uid: string): Promise<Tuit[]> =>
+        TuitModel.find({ postedBy: uid })
+            .populate("postedBy")
+            .exec();
 
 
     /**
@@ -90,4 +90,14 @@ export default class TuitDao implements TuitDaoI {
      */
     deleteTuit = async (uid: string): Promise<any> =>
         TuitModel.deleteOne({ _id: uid });
+
+
+
+    /**
+     * For testing
+     */
+
+    deleteTuitsByTuit = async (tuit: string): Promise<any> =>
+        TuitModel.deleteMany({ tuit });
+
 }
