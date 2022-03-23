@@ -28,7 +28,7 @@ var cors = require('cors')
 //mongoose.connect('mongodb://localhost:27017/tuiter-db');
 
 // Uncomment this line below to connect to mongo server online
-mongoose.connect("mongodb+srv://frostyfeet1998:cs5500password@cluster0.kgifk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://frostyfeet1998:cs5500password@cluster0.x1wvq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 const app = express();
 app.use(express.json());
