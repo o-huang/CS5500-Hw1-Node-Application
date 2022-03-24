@@ -23,6 +23,7 @@ import FollowController from "./controllers/FollowController";
 import BookmarkController from "./controllers/BookmarkController";
 import MessageController from "./controllers/MessageController";
 var cors = require('cors')
+const session = require("express-session");
 
 // Uncomment this line below to connect to local host
 //mongoose.connect('mongodb://localhost:27017/tuiter-db');
@@ -33,6 +34,22 @@ mongoose.connect("mongodb+srv://frostyfeet1998:cs5500password@cluster0.x1wvq.mon
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+let sess = {
+    secret: process.env.SECRET,
+    cookie: {
+        secure: false
+    }
+ }
+ 
+ if (process.env.ENV === 'PRODUCTION') {
+    app.set('trust proxy', 1) // trust first proxy
+    sess.cookie.secure = true // serve secure cookies
+ }
+ 
+
+
+
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!'));
 
